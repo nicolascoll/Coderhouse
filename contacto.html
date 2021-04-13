@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Rye&display=swap" rel="stylesheet">
+    <title>Contacto | Genova Pizzería</title>
+</head>
+<body>
+	<header>	
+		<img class="logo"  src="genova_log.jpg" alt="logo">
+		<nav id="links_paginas">
+			<ul>
+				<li><a href="index_v2.html#menu">Menú</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+				<li> <button id="boton_pedidos" href="">Pedí Online</button></a></li>
+			</ul> 
+		</nav>
+	</header>
+    <div id="main_contacto_centered">
+        <h1>Contacto</h1>
+        <ul id="opciones_contacto">
+            <li>
+                <span>Franquicias.</span> Abrí tu propia Genova Pizzería
+            </li>
+            <li>
+                <span>Eventos.</span> Diseñamos eventos a medida. Menúes especiales. 200+ personas.
+            </li>
+            <li>
+                <span>Consultas generales.</span>  Querés contarnos algo?
+            </li>
+        </ul>
+        <form id="form_contacto">
+            <input type="text" name="nombre" placeholder="Nombre"><br>
+            <input type="text" name="apellido" placeholder="Apellido"><br>
+            <input type="text" name="email" placeholder="E-mail"><br>
+            <select name="contacto">
+                <option value="Franquicias">Franquicias</option>
+                <option value="Eventos">Eventos</option>
+                <option value="Consultas">Consultas</option>
+            </select><br>
+            <label>Querés recibir nuestras novedades? <input type="checkbox"></label><br>
+            <textarea name="comentarios" rows="10" cols="40" placeholder="Comentarios"></textarea><br>
+            <input type="reset" value="Borrar">
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <footer id="footer">
+        &#169 Copyright - Genova Pizzería
+    </footer>
+</body>
+
+</html>

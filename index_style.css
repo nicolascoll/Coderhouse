@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    /* Estilo de index.html*/
+}
+.logo {
+    cursor: pointer;
+    height: 2%;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+}
+#links_paginas li  {
+    display: inline-block;
+    padding: 0 30px;
+
+}
+#links_paginas li a {
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    list-style: none;
+    transition: all 0.3s ease 0s;
+}
+#boton_pedidos{
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    padding: 9px 25px;
+    position: sticky;
+    background-color: rgb(177, 20, 20);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+#menu {
+    font-family: 'Rye', cursive;
+    text-align: center;
+    font-size: 26px;
+    color: firebrick;
+}
+#lista_menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+#lista_menu li {
+    list-style: none;
+    padding: 3px;
+    justify-items: center;
+}
+#lista_menu_descripcion li {
+    list-style-type: none;
+}
+#lista_menu li span{
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    color: gray;
+}
+.item_menu{
+    width: 260px;
+    height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.item_menu:hover{
+    transform: scale(1.15, 1.15);
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    padding: 16px 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Rye', cursive;
+    font-size: 10px;
+    background-image: linear-gradient(to bottom, rgb(141, 5, 5) , rgb(248, 36, 8));
+    
+}
+
+/* Estilo de contacto.hmtl */
+#main_contacto_centered{
+    margin: auto;
+    width: 50%;
+}
+#opciones_contacto{
+    list-style: none;
+
+}
+h1{
+    font-family: 'Rye', cursive;
+    font-size: 28px;
+    color: firebrick;
+
+}
+#opciones_contacto > li, label{
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    color: gray;
+    line-height: 2;
+}
+span{
+    font-family: 'Rye', cursive;
+    font-size: 18px;
+    color: firebrick;
+}
