@@ -4,14 +4,25 @@
 }
 .logo {
     cursor: pointer;
-    height: 2%;
+    height: 125px;
     padding: 0;
 }
 header {
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1%;
+    position: sticky;
+}
+@media(max-width:629px){
+    header{
+        top: 0;
+        display: inline;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;   /* PREGUNTAR SI SE PUEDE OPTIMIZAR LA SINTAXIS*/
+        overflow: auto;
+    }
 }
 #links_paginas li  {
     display: inline-block;
@@ -29,7 +40,7 @@ header {
     font-family: 'Dosis', sans-serif;
     font-size: 18px;
     padding: 9px 25px;
-    position: sticky;
+
     background-color: rgb(177, 20, 20);
     border: none;
     cursor: pointer;
@@ -44,15 +55,21 @@ header {
 #lista_menu{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     
 }
 #lista_menu li {
     list-style: none;
-    padding: 3px;
-    justify-items: center;
+    padding: 9px;
+    max-width: 278px; /* ES EL WIDTH DE .ITEM_MENU */
 }
-#lista_menu_descripcion li {
+
+.lista_menu_descripcion{
+    justify-items: center;
+    padding: 0px; /* AGREGUE ESTA LÍNEA */
+}
+.lista_menu_descripcion li {
     list-style-type: none;
 }
 #lista_menu li span{
@@ -70,9 +87,7 @@ header {
     transform: scale(1.15, 1.15);
 }
 #footer {
-    position: absolute;
-    bottom: 0;
-    padding: 16px 0;
+    padding: 12px 0;
     width: 100%;
     text-align: center;
     font-family: 'Rye', cursive;
@@ -82,9 +97,14 @@ header {
 }
 
 /* Estilo de contacto.hmtl */
+#form_contacto{
+    padding: 1%;
+}
 #main_contacto_centered{
     margin: auto;
     width: 50%;
+    background-color: #f8c740;
+    padding: 1%;
 }
 #opciones_contacto{
     list-style: none;
@@ -99,7 +119,7 @@ h1{
 #opciones_contacto > li, label{
     font-family: 'Dosis', sans-serif;
     font-size: 18px;
-    color: gray;
+    color: white;
     line-height: 2;
 }
 span{
