@@ -4,15 +4,17 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content=""> 
+	<meta name="keywords" content="Pizza artesanal, Pizzeria porteña, genovesa">
 	<title>Genova Pizzería</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 	<link rel="stylesheet" href="index_style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Rye&display=swap" rel="stylesheet">
 </head>
 <body>
 	<header>	
-		<img class="logo"  src="genova_log.jpg" alt="logo">
+		<img class="logo"  src="img/genovapng.png" alt="logo">
 		<nav id="links_paginas">
 			<ul>
 				<li><a href="#menu">Menú</a></li>
@@ -21,53 +23,59 @@
 			</ul> 
 		</nav>
 	</header>
-	<div id="demo" class="carousel slide" data-ride="carousel">
-
-		<!-- Indicators -->
-		<ul class="carousel-indicators">
-		  <li data-target="#demo" data-slide-to="0" class="active"></li>
-		  <li data-target="#demo" data-slide-to="1"></li>
-		  <li data-target="#demo" data-slide-to="2"></li>
-		</ul>
-	  
-		<!-- The slideshow -->
+	<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#myCarousel" data-slide-to="0"></li>
+			<li data-target="#myCarousel" data-slide-to="1"></li>
+			<li data-target="#myCarousel" data-slide-to="2"></li>
+		</ol>
 		<div class="carousel-inner">
-		  <div class="carousel-item active">
-			 <a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
-		  </div>
-		  <div class="carousel-item">
-			<a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
-		  </div>
-		  <div class="carousel-item">
-			<a href="https://placeholder.com"><img src="https://via.placeholder.com/150"></a>
-		  </div>
+			<div class="carousel-item active" data-interval="2000">
+				<div class="overlay-image" style="background-image: url(img/calzone.jpeg);"></div>
+				<div class="container">
+					<h1>Example Headline</h1>
+					<p>ex1</p>
+				</div>
+			</div>
+			<div class="carousel-item" data-interval="2000">
+				<div class="overlay-image" style="background-image: url(img/calzone.jpeg);"></div>
+				<div class="container">
+					<h1>Example Headline</h1>
+					<p>ex2</p>
+				</div>
+			</div>
+			<div class="carousel-item" data-interval="2000">
+			</div>
 		</div>
-	  
-		<!-- Left and right controls -->
-		<a class="carousel-control-prev" href="#demo" data-slide="prev">
-		  <span class="carousel-control-prev-icon"></span>
+		 <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+			 <span class="sr-only">Previous</span>
+			 <span class="carousel-control-prev-icon" aria-hidden="true"></span> 
+		 </a>
+		 <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="next">
+			<span class="sr-only">Previous</span>
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span> 
 		</a>
-		<a class="carousel-control-next" href="#demo" data-slide="next">
-		  <span class="carousel-control-next-icon"></span>
-		</a>
-	  
-	  </div>
+	</div>
+	
+		
 	<div id="menu">
-		<h1>Menú</h1> 
+		<h1>Pizzas</h1> 
 		<ul id="lista_menu">
 			<li>
 				<div class="item_menu">
-					<img height="470" id="" src="papa_romero.png" alt="paparomero"></div> 
-					<ul class="lista_menu_descripcion">
-						<li>Papa y romero</li>
-						<li><span>Descripción</span></li>
-						<li>Grande</li> 
-						<li>Porción </li>
-					</ul>
+					<img  class="imagen_pizza" src="img/papa_romero.png" alt="paparomero">
+				</div> 
+					<img class="decoracion_item" src="fileteado2.png">
+				<ul class="lista_menu_descripcion">
+					<li>Papa y romero</li>
+					<li><span>Descripción</span></li>
+					<li>Grande</li> 
+					<li>Porción </li>
+				</ul>
 			</li>
 			<li>
 				<div class="item_menu">
-				<img height="470" id="" src="verdeo_panceta.png" alt="verdeopanceta"></div>
+				<img class="imagen_pizza" src="img/verdeo_panceta.png" alt="verdeopanceta"></div>
 				<ul class="lista_menu_descripcion">
 					<li>Verdeo y panceta</li>
 					<li><span>Descripción</span></li>
@@ -77,7 +85,7 @@
 			</li>
 			<li>
 				<div class="item_menu">
-				<img height="470" id="" src="cuatro_quesos.png" alt="cuatroquesos"></div>
+				<img class="imagen_pizza" src="img/cuatro_quesos.png" alt="cuatroquesos"></div>
 				<ul class="lista_menu_descripcion">
 					<li>Cuatro quesos</li>
 					<li><span>Descripción</span></li>
@@ -87,7 +95,7 @@
 			</li>
 			<li>
 				<div class="item_menu">
-				<img height="470" id="" src="fugazeta.png" alt="fugazeta"></div>
+				<img class="imagen_pizza" src="img/fugazeta.png" alt="fugazeta"></div>
 				<ul class="lista_menu_descripcion">
 					<li>Fugazzeta</li>
 					<li><span>Descripción</span></li>
@@ -97,7 +105,7 @@
 			</li>
 			<li>
 				<div class="item_menu">
-				<img height="470" src="pesto.JPG" alt="pesto"></div>
+				<img class="imagen_pizza" src="img/pesto.JPG" alt="pesto"></div>
 				<ul class="lista_menu_descripcion">
 					<li>Muzzarella y pesto</li>
 					<li><span>Descripción</span></li>
@@ -107,16 +115,57 @@
 			</li>
 		</ul>
 		<h1>Empanadas</h1>
+		<ul class="menu_empanadas">
+			<li><img class="imagen_empanadas" src="img/fileteado4.png"> Jamón y Queso 
+			</li>
+			<li><img class="imagen_empanadas" src="img/fileteado4.png"> Cebolla, Champignon y Roquefort
+			</li>
+			<li><img class="imagen_empanadas" src="img/fileteado4.png"> Caprese
+			</li>
+			<li><img class="imagen_empanadas" src="img/fileteado4.png"> Verdura 
+			</li>
+		</ul>
+		<h1>Calzone</h1>
+		<ul id="lista_menu">
+			<li>
+				<div class="item_calzone">
+					<img class="imagen_calzone" src="img/calzonecaprese.jpeg" alt="calzone caprese">
+				</div> 
+				<ul class="lista_menu_descripcion">
+					<li><span>Calzone de muzzarella, tomate disecado, aceitunas negras y albahaca</span></li>
+					<li>Grande</li> 
+					<li>Porción </li>
+				</ul>
+			</li>
+			<li>
+				<div class="item_calzone">
+					<img class="imagen_calzone" src="img/calzonelonganiza.jpeg" alt="calzone de longaniza">
+				</div> 
+				<ul class="lista_menu_descripcion">
+					<li><span>Calzone de muzzarella, longaniza y tomates frescos</span></li>
+					<li>Grande</li> 
+					<li>Porción </li>
+				</ul>
+			</li>
+			<li>
+				<div class="item_calzone">
+					<img class="imagen_calzone" src="img/calzoneroquefort.jpeg" alt="calzone de roquefort">
+				</div> 
+				<ul class="lista_menu_descripcion">
+					<li><span>Calzone de muzzarella, morrones asados, roquefort y cebolla</span></li>
+					<li>Grande</li> 
+					<li>Porción </li>
+				</ul>
+			</li>
+		</ul>
 	</div>
 
 	
 	<footer id="footer">
 		&#169 Copyright - Genova Pizzería
 	</footer>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 </body>
 
 </html>
