@@ -1,0 +1,148 @@
+$color_uno: firebrick;
+$color_dos:#f8c740;
+$color_botonpedidos: rgb(177, 20, 20);
+$altura_imgpizza: 470px;
+$dimension_pizzacontainer: 260px;
+$padding_pizzacontainer: 9px;
+
+* {
+    box-sizing: border-box;
+    /* Estilo de index.html*/
+}
+.logo {
+    cursor: pointer;
+    height: 125px;
+    padding: 0;
+}
+header {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+}
+@media(max-width:629px){
+    header{
+        top: 0;
+        display: inline;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;   /* PREGUNTAR SI SE PUEDE OPTIMIZAR LA SINTAXIS*/
+        overflow: auto;
+    }
+}
+#links_paginas li  {
+    display: inline-block;
+    padding: 0 30px;
+    text-decoration: none;
+    a {
+        font-family: 'Dosis', sans-serif;
+        font-size: 18px;
+        text-decoration: none;
+        list-style: none;
+        transition: all 0.3s ease 0s;
+    }
+}
+#boton_pedidos{
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    padding: 9px 25px;
+    background-color: $color_botonpedidos;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+#menu {
+    font-family: 'Rye', cursive;
+    text-align: center;
+    font-size: 26px;
+    color: $color_uno;
+}
+#lista_menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    li {
+        list-style: none;
+        padding: $padding_pizzacontainer;
+        max-width: $dimension_pizzacontainer + 2*$padding_pizzacontainer; /* ES EL WIDTH DE .ITEM_MENU */
+    }
+}
+.imagen_pizza{
+    height:$altura_imgpizza;
+}
+.lista_menu_descripcion{
+    justify-items: center;
+    padding: 0px; /* AGREGUE ESTA LÍNEA */
+    li{
+        list-style-type: none;}
+}
+#lista_menu li span{
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    color: gray;
+}
+.item_menu{
+    width: $dimension_pizzacontainer;
+    height: $dimension_pizzacontainer;
+    border-radius: $dimension_pizzacontainer/21.7;
+    overflow: hidden;
+}
+.item_menu:hover{
+    transform: scale(1.15, 1.15);
+    .decoracion_item{
+        height: $altura_imgpizza/10;
+        z-index: 2;
+        position: relative;
+        bottom: $altura_imgpizza/20;
+        left: $dimension_pizzacontainer/4;
+    }
+}
+.decoracion_item{
+    visibility: hidden;
+    height: $altura_imgpizza/10;
+    z-index: 2;
+    position: relative;
+    bottom: $altura_imgpizza/20;
+    left: $dimension_pizzacontainer/2;
+    transition: position 1.8s;
+}
+#footer {
+    padding: 12px 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'Rye', cursive;
+    font-size: 10px;
+    background-image: linear-gradient(to bottom, rgb(141, 5, 5) , rgb(248, 36, 8));
+}
+
+/* Estilo de contacto.hmtl */
+#form_contacto{
+    padding: 1%;
+}
+#main_contacto_centered{
+    margin: auto;
+    width: 50%;
+    background-color: #f8c740;
+    padding: 1%;
+}
+#opciones_contacto{
+    list-style: none;
+}
+h1{
+    font-family: 'Rye', cursive;
+    font-size: 28px;
+    color: $color_uno;
+}
+#opciones_contacto > li, label{
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    color: white;
+    line-height: 2;
+}
+span{
+    font-family: 'Rye', cursive;
+    font-size: 18px;
+    color: $color_uno;
+}
