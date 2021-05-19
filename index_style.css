@@ -4,8 +4,8 @@
 }
 .logo {
     cursor: pointer;
-    height: 125px;
-    padding: 0;
+    height: 115px;
+    padding: 10px;
 }
 header {
     top: 0;
@@ -13,6 +13,8 @@ header {
     justify-content: space-between;
     align-items: center;
     position: sticky;
+    background-color: firebrick;
+    z-index: 2;
 }
 @media(max-width:629px){
     header{
@@ -27,7 +29,7 @@ header {
 #links_paginas li  {
     display: inline-block;
     padding: 0 30px;
-
+    text-decoration: none;
 }
 #links_paginas li a {
     font-family: 'Dosis', sans-serif;
@@ -35,16 +37,48 @@ header {
     text-decoration: none;
     list-style: none;
     transition: all 0.3s ease 0s;
+    color: white;
+}
+#links_paginas li a:hover{
+    color: #d2d6ba;
 }
 #boton_pedidos{
     font-family: 'Dosis', sans-serif;
     font-size: 18px;
     padding: 9px 25px;
-
-    background-color: rgb(177, 20, 20);
+    background-color: #f8c740;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+}
+#boton_pedidos:hover{
+    color: firebrick;
+}
+.carousel-item{
+    height: 32rem;
+    background: #000;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding-bottom: 50px;
+
+}
+.overlay-image{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
 }
 #menu {
     font-family: 'Rye', cursive;
@@ -57,14 +91,15 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    
 }
 #lista_menu li {
     list-style: none;
     padding: 9px;
     max-width: 278px; /* ES EL WIDTH DE .ITEM_MENU */
 }
-
+.imagen_pizza{
+    height: 470px;
+}
 .lista_menu_descripcion{
     justify-items: center;
     padding: 0px; /* AGREGUE ESTA LÍNEA */
@@ -85,6 +120,50 @@ header {
 }
 .item_menu:hover{
     transform: scale(1.15, 1.15);
+}
+.item_menu:hover ~ .decoracion_item{
+    height: 47px;
+    z-index: 2;
+    position: relative;
+    bottom: 23.5px;
+    left: 65px;
+}
+.decoracion_item{
+visibility: hidden;
+height: 47px;
+z-index: 2;
+position: relative;
+bottom: 23.5px;
+left: 130px;
+transition: position 1.8s;
+}
+.imagen_empanadas{
+    height: 28px;  /* MULTIPLO DEL FONTSIZE EN MENU_EMPANADAS LI */
+}
+.menu_empanadas{
+    position: relative;
+    width: max-content;
+    margin: 0 auto; /*ESTA LINEA HIZO QUE SE CENTRE*/
+    height: max-content;
+    padding: 1%;
+}
+.menu_empanadas li{
+    list-style-type: none;
+    font-size: 21px; /*TRES CUARTOS DE FONTSIZE EN h1*/
+    text-align: left;
+}
+.menu_empanadas :hover{
+transform: scale(1.15);
+}
+.item_calzone{
+    width: 260px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 5px solid black;
+}
+.imagen_calzone{
+    max-width: 100%;
+    max-height: 100%;
 }
 #footer {
     padding: 12px 0;
@@ -114,7 +193,7 @@ h1{
     font-family: 'Rye', cursive;
     font-size: 28px;
     color: firebrick;
-
+    padding: 8px;
 }
 #opciones_contacto > li, label{
     font-family: 'Dosis', sans-serif;
