@@ -1,90 +1,205 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
     /* Estilo de index.html*/
 }
-.logo {
-    cursor: pointer;
-    height: 115px;
-    padding: 10px;
+body{
+    background-color: #f3f3f3;
 }
-header {
+
+#logo{
+    cursor: pointer;
+    height: 100px;
+}
+nav {
+    background: #a20001;
+    padding: 3px 10px;
+    position: sticky;
     top: 0;
+    z-index: 2;
+  }
+.menu ul {
+    list-style-type: none;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    padding: 0 10px;
+}
+  a:hover {
+    color: #d2d6ba;
+  }
+ 
+  .menu li {
+    font-size: 16px;
+    padding: 10px 4px;
+    white-space: nowrap;
+  }
+  .toggle a {
+    font-size: 20px;
+
+  }
+ 
+  /* Mobile menu */
+  .menu {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    background-color: firebrick;
-    z-index: 2;
-}
-@media(max-width:629px){
-    header{
-        top: 0;
-        display: inline;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;   /* PREGUNTAR SI SE PUEDE OPTIMIZAR LA SINTAXIS*/
-        overflow: auto;
+  }
+  .toggle {
+    order: 1;
+  }
+  .item.button {
+    order: 2;
+  }
+  .item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+    display: none;
+  }
+  .item.active {
+    display: block;
+  }
+  /* Tablet menu */
+  @media all and (min-width: 600px) {
+    .menu {
+      justify-content: center;
     }
-}
-#links_paginas li  {
-    display: inline-block;
-    padding: 0 30px;
-    text-decoration: none;
-}
-#links_paginas li a {
-    font-family: 'Dosis', sans-serif;
-    font-size: 18px;
-    text-decoration: none;
-    list-style: none;
-    transition: all 0.3s ease 0s;
-    color: white;
-}
-#links_paginas li a:hover{
-    color: #d2d6ba;
-}
-#boton_pedidos{
-    font-family: 'Dosis', sans-serif;
-    font-size: 18px;
-    padding: 9px 25px;
-    background-color: #f8c740;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-#boton_pedidos:hover{
-    color: firebrick;
-}
-.carousel-item{
-    height: 32rem;
-    background: #000;
-    color: white;
-    position: relative;
-    background-position: center;
-    background-size: cover;
-}
-.container{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding-bottom: 50px;
-
-}
-.overlay-image{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    background-position: center;
-    background-size: cover;
-    opacity: 0.5;
-}
+    .logo {
+      flex: 1;
+    }
+    .toggle {
+      flex: 1;
+      text-align: right;
+    }
+    .item.button {
+      width: auto;
+      order: 1;
+      display: block;
+    }
+    .toggle {
+      order: 2;
+    }
+   
+    .button a {
+      font-family: 'Dosis', sans-serif;
+      font-size: 18px;
+      padding: 9px 25px;
+      background-color: #f8c740;
+      border: none;
+      cursor: pointer;
+    }
+    .button a:hover {
+      text-decoration: none;
+    }
+    .button a:hover {
+        color: #a20001;
+    }
+  }
+  /* Desktop menu */
+  @media all and (min-width: 900px) {
+    .item {
+      display: block;
+      width: auto;
+    }
+    .toggle {
+      display: none;
+    }
+    .logo {
+      order: 0;
+    }
+    .item {
+      order: 1;
+    }
+    .button {
+      order: 2;
+    }
+    .menu li {
+      padding: 15px 10px;
+    }
+    .menu li.button {
+      padding-right: 0;
+    }
+  }
 #menu {
     font-family: 'Rye', cursive;
     text-align: center;
     font-size: 26px;
-    color: firebrick;
+    color: #a20001;
+}
+.container_pizza_fixed_background{
+    height: 100vh;
+}
+.pizza_fixed_background{
+    height: 100vh;
+    background-image: url(img/papa_romero_inv.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+@media(min-width:1334px){
+    .container_pizza_fixed_background{
+        width: 1334px;
+        height: 750px;
+        margin: 0 auto;
+    }
+    .pizza_fixed_background{
+        height: 100%;
+    }
+}
+
+.container_menu_decoration{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+
+}
+.menu_decoration{
+    padding-left: 35px; /* PADDING LEFT Y RIGHT TIENE QUE SER MULTIPLO DE ALTURA DE ESTE ELEMENTO*/
+    padding-right: 35px;
+}
+#element1{
+    height: 32px; /* MULTIPLO DE ALTURA DE LETRA DE NOMBRE DEL MENU*/
+    margin: 0;
+}
+#element2{
+    height: 10px; /* MULTIPLO DE ALTURA DE LETRA DE NOMBRE DEL MENU*/
+}
+#element3{
+    height: 50px; /* MULTIPLO DE ALTURA DE LETRA DE NOMBRE DEL MENU*/
+}
+.container_fixed_background{
+    max-width: 750px;
+}
+.fixed_background{
+    height: 100vh;
+    background-image: url(img/calzone.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+
+@media(min-width:750px){
+    .container_fixed_background{
+        width: 750px;
+        height: 555px;
+        margin: 0 auto;
+    }
+    .fixed_background{
+        height: 100%;
+    }
 }
 #lista_menu{
     display: flex;
@@ -95,7 +210,7 @@ header {
 #lista_menu li {
     list-style: none;
     padding: 9px;
-    max-width: 278px; /* ES EL WIDTH DE .ITEM_MENU */
+    max-width: 284px; /* ES EL WIDTH DE .ITEM_MENU */
 }
 .imagen_pizza{
     height: 470px;
@@ -103,11 +218,14 @@ header {
 .lista_menu_descripcion{
     justify-items: center;
     padding: 0px; /* AGREGUE ESTA LÍNEA */
+    position: relative;
+    top: -20px;
 }
 .lista_menu_descripcion li {
     list-style-type: none;
+    line-height: 40px;
 }
-#lista_menu li span{
+.lista_menu_descripcion li span{
     font-family: 'Dosis', sans-serif;
     font-size: 20px;
     color: gray;
@@ -115,55 +233,62 @@ header {
 .item_menu{
     width: 260px;
     height: 260px;
-    border-radius: 12px;
+
     overflow: hidden;
 }
-.item_menu:hover{
-    transform: scale(1.15, 1.15);
+.item_menu:hover ~ .decoracion_item_arriba{
+    height: 47px;
+    z-index: 2;
+    position: relative;
+    top: 23.5px;
+    left: 65px;
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 1.5s; 
 }
-.item_menu:hover ~ .decoracion_item{
+.decoracion_item_arriba{
+    visibility: hidden;
+    height: 47px;
+    z-index: 2;
+    position: relative;
+    top: 23.5px;
+    left: 130px;
+    opacity: 0.4; 
+}
+.item_menu:hover ~ .decoracion_item_abajo{ 
     height: 47px;
     z-index: 2;
     position: relative;
     bottom: 23.5px;
-    left: 65px;
+    right: 65px;
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 1.5s;
 }
-.decoracion_item{
-visibility: hidden;
-height: 47px;
-z-index: 2;
-position: relative;
-bottom: 23.5px;
-left: 130px;
-transition: position 1.8s;
-}
-.imagen_empanadas{
-    height: 28px;  /* MULTIPLO DEL FONTSIZE EN MENU_EMPANADAS LI */
-}
-.menu_empanadas{
+.decoracion_item_abajo{
+    visibility: hidden;
+    height: 47px;
+    z-index: 2;
     position: relative;
-    width: max-content;
-    margin: 0 auto; /*ESTA LINEA HIZO QUE SE CENTRE*/
-    height: max-content;
-    padding: 1%;
+    bottom: 23.5px;
+    right: 130px;
+    opacity: 0.4;
 }
-.menu_empanadas li{
-    list-style-type: none;
-    font-size: 21px; /*TRES CUARTOS DE FONTSIZE EN h1*/
-    text-align: left;
+
+#lista_calzone{
+    display: flex; /* ES IGUAL A LISTA MENU*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
-.menu_empanadas :hover{
-transform: scale(1.15);
-}
-.item_calzone{
-    width: 260px;
-    border-radius: 6px;
-    overflow: hidden;
-    border: 5px solid black;
+.calzone_container{
+    list-style: none;
+    padding: 10px;
+    width: 320px;/* ES EL WIDTH DE .ITEM_MENU */
 }
 .imagen_calzone{
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
 }
 #footer {
     padding: 12px 0;
@@ -171,38 +296,136 @@ transform: scale(1.15);
     text-align: center;
     font-family: 'Rye', cursive;
     font-size: 10px;
-    background-image: linear-gradient(to bottom, rgb(141, 5, 5) , rgb(248, 36, 8));
-    
+    background-color: #a20001;
+    position: sticky;
+    bottom: 0;
+    z-index: 2;
 }
 
 /* Estilo de contacto.hmtl */
-#form_contacto{
-    padding: 1%;
+.contacto_body{
+	height: 100vh;
+	width: 100%;
 }
-#main_contacto_centered{
-    margin: auto;
-    width: 50%;
-    background-color: #f8c740;
-    padding: 1%;
+.container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
 }
-#opciones_contacto{
-    list-style: none;
+.container:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("img/calzone.jpeg") no-repeat center;
+	background-size: cover;
+	filter: blur(1.15rem);
+	z-index: -1;
+}
 
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #f3f3f3;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
-h1{
-    font-family: 'Rye', cursive;
-    font-size: 28px;
-    color: firebrick;
-    padding: 8px;
+.lado_izq{
+	height: 100%;
+    background-color: #f8c740;
 }
-#opciones_contacto > li, label{
-    font-family: 'Dosis', sans-serif;
-    font-size: 18px;
+.content_izq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     color: white;
-    line-height: 2;
 }
-span{
+.content_izq li{
+    list-style: none;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 'Dosis', sans-serif;
+}
+.content_izq h4{
+    font-weight: bold;
+    font-size: 24px;
+}
+.lado_der{
+	padding: 25px 40px;
+}
+.header_contact{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
     font-family: 'Rye', cursive;
-    font-size: 18px;
-    color: firebrick;
+    color: #a20001;
+}
+.header_contact:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: #a20001;
+}
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgb(255, 255, 255);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+    font-family: 'Dosis', sans-serif;
+}
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+textarea{
+	min-height: 150px;
+}
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: #a20001;
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+    font-family: 'Dosis', sans-serif;
+}
+.btn:hover{
+    background-color: #7a0202;
+    color: #d2d6ba;
+}
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+    .container{
+        margin-bottom: 40px;
+    }
+	.lado_izq{
+		height: max-content;
+	}
 }
