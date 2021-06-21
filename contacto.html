@@ -4,53 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
     <link rel="stylesheet" href="index_style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Rye&display=swap" rel="stylesheet">
     <title>Contacto | Genova Pizzería</title>
 </head>
-<body>
-	<header>	
-		<img class="logo"  src="genova_log.jpg" alt="logo">
-		<nav id="links_paginas">
-			<ul>
-				<li><a href="index_v2.html#menu">Menú</a></li>
-				<li><a href="contacto.html">Contacto</a></li>
-				<li> <button id="boton_pedidos" href="">Pedí Online</button></a></li>
-			</ul> 
-		</nav>
-	</header>
-    <div id="main_contacto_centered">
-        <h1>Contacto</h1>
-        <ul id="opciones_contacto">
-            <li>
-                <span>Franquicias.</span> Abrí tu propia Genova Pizzería
-            </li>
-            <li>
-                <span>Eventos.</span> Diseñamos eventos a medida. Menúes especiales. 200+ personas.
-            </li>
-            <li>
-                <span>Consultas generales.</span>  Querés contarnos algo?
-            </li>
+<body class="contacto_body">
+
+    <nav>
+        <ul class="menu">
+          <li class="logo"><a href="index.html"><img id="logo"  src="img/genovapng.png" alt="logo"></a></li>
+          <li class="item"><a href="index.html">Menú</a></li>
+          <li class="item"><a href="#">Contacto</a></li>
+          <li class="item button"><a href="https://api.whatsapp.com/send?phone=541126761005">Pedí Online</a></li>
+          <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul>
-        <form id="form_contacto">
-            <input type="text" name="nombre" placeholder="Nombre"><br>
-            <input type="text" name="apellido" placeholder="Apellido"><br>
-            <input type="text" name="email" placeholder="E-mail"><br>
-            <select name="contacto">
-                <option value="Franquicias">Franquicias</option>
-                <option value="Eventos">Eventos</option>
-                <option value="Consultas">Consultas</option>
-            </select><br>
-            <label>Querés recibir nuestras novedades? <input type="checkbox"></label><br>
-            <textarea name="comentarios" rows="10" cols="40" placeholder="Comentarios"></textarea><br>
-            <input type="reset" value="Borrar">
-            <input type="submit" value="Enviar">
-        </form>
-    </div>
+      </nav>  
+
+    <div class="container">
+		<div class="contact-box">
+			<div class="lado_izq">
+                <div class="content_izq">
+                    <ul> 
+                        <li><h4>San Andrés</h4></li>
+                        <li>Libertad 3629</li>
+                        <li><a href="https://www.instagram.com/genovapizzeria_/" target="new"> <img src="img/link_ig.png" alt="instagram"> </a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=541126761005" target="new"> <img src="img/link_wp.png" alt="whatsapp"> </a></li>
+                    </ul>
+                
+                </div>
+            </div>
+			<div class="lado_der">
+				<h2 class="header_contact">Contáctenos</h2>
+				<input type="text" class="field" placeholder="Su nombre">
+				<input type="text" class="field" placeholder="Su email">
+				<input type="text" class="field" placeholder="Teléfono">
+				<textarea placeholder="Mensaje" class="field"></textarea>
+				<button class="btn">Enviar</button>
+			</div>
+		</div>
+	</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script>
+$(function() {
+    $(".toggle").on("click", function() {
+        if ($(".item").hasClass("active")) {
+            $(".item").removeClass("active");
+            $(this).find("a").html("<i class='fas fa-bars'></i>");
+        } else {
+            $(".item").addClass("active");
+            $(this).find("a").html("<i class='fas fa-times'></i>");
+        }
+    });
+});
+    </script>
     <footer id="footer">
         &#169 Copyright - Genova Pizzería
     </footer>
+</body>
 </body>
 
 </html>
