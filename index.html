@@ -13,16 +13,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Rye&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav>
+<body id="body-index" class="activo">
+    <nav id="nav" class="activo">
         <ul class="menu">
           <li class="logo"><a href="index.html"><img id="logo"  src="img/genovapng.png" alt="logo"></a></li>
           <li class="item"><a href="#">Menú</a></li>
           <li class="item"><a href="contacto.html">Contacto</a></li>
-          <li class="item button"><a href="https://api.whatsapp.com/send?phone=541126761005">Pedí Online</a></li>
+          <li class="item button"><a href="pedidos.html">Pedí Online</a></li>
           <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
         </ul>
-      </nav>  
+    </nav>  
+
+	  <div id="boxPedido" class="modal activo"><a href="pedidos.html">Pedí Online!</a>
+		<button data-close-button class="close-button">&times;</button>
+	  </div>
 
 
 	<div id="menu">
@@ -166,6 +170,8 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
+	<script src="index.js"></script>
+
     <script>
 $(function() {
     $(".toggle").on("click", function() {
