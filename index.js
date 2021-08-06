@@ -21,7 +21,7 @@ closeModalButtons.forEach(button => {
 
 function closeModal(modal) {
   if (modal == null) return;
-  modal.classList.remove('activo');
   body.classList.remove('activo');
+  modal.classList.remove('activo');
   nav.classList.remove('activo');
 }

@@ -13,15 +13,40 @@
 </head>
 <body class="contacto_body">
 
-    <nav id="nav">
-        <ul class="menu">
-          <li class="logo"><a href="index.html"><img id="logo"  src="img/genovapng.png" alt="logo"></a></li>
-          <li class="item"><a href="index.html">Menú</a></li>
-          <li class="item"><a href="#">Contacto</a></li>
-          <li class="item button"><a href="pedidos.html">Pedí Online</a></li>
-          <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    <nav>
+        <div>
+            <img class="logo" src="img/genovapng.png">
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Menú</a>
+            </li>
+            <li>
+                <a href="contacto.html">Contacto</a>
+            </li>
+            <li>
+                <a href="pedidos.html">Pedí Online</a>
+            </li>
+            <li class="carro">
+                <a href="#"><img src="img/shopping-cart.png" style="height: 24px;"></a>
+                <div class="modal-carrito">
+                    <button id="close-carrito">&times;</button>
+                    <div class="interior-carrito">
+                        
+                    </div>
+                    <div class="btns-carrito">
+                        <button class="btn">Vaciar Carrito</button>
+                        <button class="btn">Finalizar Compra</button>
+                    </div>
+                </div>
+            </li>
         </ul>
-      </nav>  
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
 
     <div class="container">
 		<div class="contact-box">
@@ -38,35 +63,24 @@
             </div>
 			<div class="lado_der">
 				<h2 class="header_contact">Contáctenos</h2>
-				<input type="text" class="field" placeholder="Su nombre">
-				<input type="text" class="field" placeholder="Su email">
-				<input type="text" class="field" placeholder="Teléfono">
-				<textarea placeholder="Mensaje" class="field"></textarea>
-				<button class="btn">Enviar</button>
+				<input type="text" class="field input" name="nombre" placeholder="Su nombre">
+				<input type="text" class="field input" name="email" placeholder="Su email">
+				<input type="text" class="field input" name="telefono" placeholder="Teléfono">
+				<textarea placeholder="Mensaje" name="mensaje" class="field input"></textarea>
+                 <div class="warning hidden"><img src="img/exclamation-mark.png" height="30px" alt=""><h3 class="form-warning">Todos los campos deben ser completados</h3></div> 
+				<button type="submit" class="btn">Enviar</button>
 			</div>
 		</div>
 	</div>
 
-    <footer id="footer">
+    <footer id="contact-footer">
         &#169 Copyright - Genova Pizzería
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
-    <script>
-$(function() {
-    $(".toggle").on("click", function() {
-        if ($(".item").hasClass("active")) {
-            $(".item").removeClass("active");
-            $(this).find("a").html("<i class='fas fa-bars'></i>");
-        } else {
-            $(".item").addClass("active");
-            $(this).find("a").html("<i class='fas fa-times'></i>");
-        }
-    });
-});
-    </script>
+
     <script src="contacto.js"></script>
+    <script src="navbar.js"></script>
  
 </body>
 

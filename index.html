@@ -14,19 +14,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Rye&display=swap" rel="stylesheet">
 </head>
 <body id="body-index" class="activo">
-    <nav id="nav" class="activo">
-        <ul class="menu">
-          <li class="logo"><a href="index.html"><img id="logo"  src="img/genovapng.png" alt="logo"></a></li>
-          <li class="item"><a href="#">Menú</a></li>
-          <li class="item"><a href="contacto.html">Contacto</a></li>
-          <li class="item button"><a href="pedidos.html">Pedí Online</a></li>
-          <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-        </ul>
-    </nav>  
-
-	  <div id="boxPedido" class="modal activo"><a href="pedidos.html">Pedí Online!</a>
+    <nav>
+		<div>
+			<img class="logo" src="img/genovapng.png">
+		</div>
+		<ul class="nav-links">
+			<li>
+				<a href="index.html">Menú</a>
+			</li>
+			<li>
+				<a href="contacto.html">Contacto</a>
+			</li>
+			<li>
+				<a href="pedidos.html">Pedí Online</a>
+			</li>
+			<li class="carro">
+				<a href="#"><img src="img/shopping-cart.png" style="height: 24px;"></a>
+				<div class="modal-carrito">
+					<button id="close-carrito">&times;</button>
+					<div class="interior-carrito">
+						
+					</div>
+					<div class="btns-carrito">
+						<button class="btn">Vaciar Carrito</button>
+						<button class="btn">Finalizar Compra</button>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="burger">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</nav>
+	<div class="modal activo">
 		<button data-close-button class="close-button">&times;</button>
-	  </div>
+	  	<div id="boxPedido" ><img src="img/pedionline.png" alt="">
+
+	  	</div>
+	</div> 
 
 
 	<div id="menu">
@@ -60,8 +87,6 @@
 				<ul class="lista_menu_descripcion">
 					<li>Papa y romero</li>
 					<li><span>Queso mozzarella, papa, romero fresco, y ajo</span></li>
-					<li>Grande $550</li> 
-					<li>Porción $90</li>
 				</ul>
 			</li>
 			<li>
@@ -73,8 +98,7 @@
 				<ul class="lista_menu_descripcion">
 					<li>Verdeo y panceta</li>
 					<li><span>Queso mozzarella, panceta y cebolla de verdeo</span></li>
-					<li>Grande $690</li> 
-					<li>Porción $115</li>
+
 				</ul>
 			</li>
 			<li>
@@ -86,8 +110,7 @@
 				<ul class="lista_menu_descripcion">
 					<li>Cuatro quesos</li>
 					<li><span>Queso mozzarella, provolone, roquefort y reggianito</span></li>
-					<li>Grande $770</li> 
-					<li>Porción $130</li>
+
 				</ul>
 			</li>
 			<li>
@@ -98,8 +121,7 @@
 				<ul class="lista_menu_descripcion">
 					<li>Fugazzeta</li>
 					<li><span>Queso mozzarella y cebolla sazonada con aceite de oliva</span></li>
-					<li>Grande $500</li> 
-					<li>Porción $80</li>
+
 				</ul>
 			</li>
 			<li>
@@ -110,8 +132,7 @@
 				<ul class="lista_menu_descripcion">
 					<li>Muzzarella y pesto</li>
 					<li><span>Queso mozzarella y pesto suave de albahaca</span></li>
-					<li>Grande $500</li> 
-					<li>Porción $80</li>
+
 				</ul>
 			</li>
 		</ul>
@@ -141,8 +162,7 @@
 					<img class="decoracion_item_abajo" src="img/fileteado2inverso.png">
 				<ul class="lista_menu_descripcion">
 					<li><span>Calzone de muzzarella, tomate disecado, aceitunas negras y albahaca</span></li>
-					<li>Grande $700</li> 
-					<li>Porción $230</li>
+
 				</ul>
 			</li>
 			<li class="calzone_container">
@@ -151,8 +171,7 @@
 					<img class="decoracion_item_abajo" src="img/fileteado2inverso.png">
 				<ul class="lista_menu_descripcion">
 					<li><span>Calzone de muzzarella, longaniza y tomates frescos</span></li>
-					<li>Grande $700</li> 
-					<li>Porción $230</li>
+
 				</ul>
 			</li>
 			<li class="calzone_container">
@@ -161,30 +180,18 @@
 					<img class="decoracion_item_abajo" src="img/fileteado2inverso.png">
 				<ul class="lista_menu_descripcion">
 					<li><span>Calzone de muzzarella, morrones asados, roquefort y cebolla</span></li>
-					<li>Grande $700</li> 
-					<li>Porción $230</li>
+
 				</ul>
 			</li>
 		</ul>
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
-	<script src="index.js"></script>
 
-    <script>
-$(function() {
-    $(".toggle").on("click", function() {
-        if ($(".item").hasClass("active")) {
-            $(".item").removeClass("active");
-            $(this).find("a").html("<i class='fas fa-bars'></i>");
-        } else {
-            $(".item").addClass("active");
-            $(this).find("a").html("<i class='fas fa-times'></i>");
-        }
-    });
-});
-    </script>	
+    
+
+
+    <script src="navbar.js"></script>
+	<script src="index.js"></script>
 	<footer id="footer">
 		&#169 Copyright - Genova Pizzería
 	</footer>

@@ -5,33 +5,167 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="index_style_probando.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Rye&display=swap" rel="stylesheet">
     <title>Pedidos | Genova Pizzería</title>
+    
 </head>
-<nav id="nav" >
-    <ul class="menu">
-      <li class="logo"><a href="index.html"><img id="logo"  src="img/genovapng.png" alt="logo"></a></li>
-      <li class="item"><a href="index.html">Menú</a></li>
-      <li class="item"><a href="contacto.html">Contacto</a></li>
-      <li class="item button"><a href="pedidos.html">Pedí Online</a></li>
-      <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+<nav>
+    <div>
+        <img class="logo" src="img/genovapng.png">
+    </div>
+    <ul class="nav-links">
+        <li>
+            <a href="index.html">Menú</a>
+        </li>
+        <li>
+            <a href="contacto.html">Contacto</a>
+        </li>
+        <li>
+            <a href="pedidos.html">Pedí Online</a>
+        </li>
+        <li class="carro">
+            <a href="#"><img src="img/shopping-cart.png" style="height: 24px;"></a>
+            <div class="modal-carrito">
+                <button id="close-carrito">&times;</button>
+                <div class="interior-carrito">
+                    
+                </div>
+                <div class="btns-carrito">
+                    <button class="btn">Vaciar Carrito</button>
+                    <button class="btn">Finalizar Compra</button>
+                </div>
+            </div>
+        </li>
     </ul>
-  </nav> 
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+
 
 <body class="pedidos_body">
     <div class="pedidos_container">
         <ul class="pedidos_opciones">
             <li>
-                <a class="pedidos_btn" href="">Delivery</a>
+                <img class="pedidos_btn" src="img/delivery.png" alt="delivery">
             </li>
             <li>
-                <a class="pedidos_btn" href="">Retirar por el local</a> 
+                <img class="pedidos_btn" src="img/retiroxlocal.png" alt="retiroxlocal">
             </li>
         </ul>
     </div>
-    
+    <div class="pedidos_menu">
+        <img class="back-to first" src="img/flecha.png" alt="">
+        <ul class="ul-pedidos-menu">
+            <li>
+                <img class="img-prod imagen_calzone" data-prod="lista_calzone" src="img/calzone.jpeg" alt="calzone">
+                <ul>
+                    <li class="titulo-prod">Calzone</li>
+                </ul>
+            </li>
+            <li>
+                <div class="item-menu-pedidos">
+                    <img class="img-prod" data-prod="lista_menu" src="img/papa_romero.png" alt="pizza">
+                </div>
+                <ul>
+                    <li class="titulo-prod">Pizza</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <img class="back-to-second hidden" src="img/flecha.png" alt="">
+    <div id="menu">
+        
+        <ul id="lista_menu" class="hidden">
+
+            <li>
+                <div class="item_menu">
+                <img  class="imagen_pizza" src="img/papa_romero.png" alt="paparomero">
+                </div>
+                <ul class="lista_menu_descripcion pedidos-ul">
+                    <li>Papa y romero</li>
+                    <li><span>Queso mozzarella, papa, romero fresco, y ajo</span></li>
+                    <li>Grande $610</li>
+                    <li><button data-id="3" class="btn add-to-cart">Agregar al carrito</button></li>
+                </ul>
+            </li>
+            <li>
+                <div class="item_menu">
+                    <img class="imagen_pizza" src="img/verdeo_panceta.png" alt="verdeopanceta">
+                </div>
+                <ul class="lista_menu_descripcion pedidos-ul">
+                    <li>Verdeo y panceta</li>
+                    <li><span>Queso mozzarella, panceta y cebolla de verdeo</span></li>
+                    <li>Grande $760</li>
+                    <li><button data-id="11" class="btn add-to-cart">Agregar al carrito</button></li>
+                </ul>
+            </li>
+            <li>
+                <div class="item_menu">
+                    <img class="imagen_pizza" src="img/cuatro_quesos.png" alt="cuatroquesos">
+                </div>
+                <ul class="lista_menu_descripcion pedidos-ul">
+                    <li>Cuatro quesos</li>
+                    <li><span>Queso mozzarella, provolone, roquefort y reggianito</span></li>
+                    <li>Grande $840</li>
+                    <li><button data-id="13" class="btn add-to-cart">Agregar al carrito</button></li>
+                </ul>
+            </li>
+            <li>
+                <div class="item_menu ">
+                    <img class="imagen_pizza" src="img/fugazeta.png" alt="fugazeta"></div>
+                <ul class="lista_menu_descripcion pedidos-ul">
+                    <li>Fugazzeta</li>
+                    <li><span>Queso mozzarella y cebolla sazonada con aceite de oliva</span></li>
+                    <li>Grande $550</li>
+                    <li><button data-id="2" class="btn add-to-cart">Agregar al carrito</button></li>
+                </ul>
+            </li>
+            <li>
+                <div class="item_menu">
+                    <img class="imagen_pizza" src="img/pesto.JPG" alt="pesto"></div>
+                <ul class="lista_menu_descripcion pedidos-ul">
+                    <li>Muzzarella y pesto</li>
+                    <li><span>Queso mozzarella y pesto suave de albahaca</span></li>
+                    <li>Grande $640</li>
+                    <li><button data-id="24" class="btn add-to-cart">Agregar al carrito</button></li>
+                </ul>
+                
+            </li>
+        </ul>
+
+        <ul id="lista_calzone" class="hidden">
+            <li class="calzone_container">
+                    <img class="imagen_calzone " src="img/calzonecaprese.jpeg" alt="calzone caprese">
+                <ul class="lista_menu_descripcion pedidos-ul">
+                    <li><span>Calzone de muzzarella, tomate disecado, aceitunas negras y albahaca</span></li>
+                    <li>Grande $770</li>
+                    <li><button data-id="21" class="btn add-to-cart">Agregar al carrito</button></li>
+                </ul>
+            </li>
+            <li class="calzone_container">
+                    <img class="imagen_calzone " src="img/calzonelonganiza.jpeg" alt="calzone de longaniza">
+                <ul class="lista_menu_descripcion pedidos-ul">
+                    <li><span>Calzone de muzzarella, longaniza y tomates frescos</span></li>
+                    <li>Grande $770</li>
+                    <li><button data-id="23" class="btn add-to-cart">Agregar al carrito</button></li>
+                </ul>
+            </li>
+            <li class="calzone_container">
+                    <img class="imagen_calzone" src="img/calzoneroquefort.jpeg" alt="calzone de roquefort">
+                <ul class="lista_menu_descripcion pedidos-ul">
+                    <li><span>Calzone de muzzarella, morrones asados, roquefort y cebolla</span></li>
+                    <li>Grande $770</li>
+                    <li><button data-id="22" class="btn add-to-cart">Agregar al carrito</button></li>                
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="navbar.js"></script>
+    <script src="pedidos.js"></script>
 </body>
 </html>
